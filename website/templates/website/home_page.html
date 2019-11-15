@@ -5,7 +5,7 @@
 {% block contents %}
 
 <div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-12" style="margin-top: 0;background-color: #000000;opacity: 0.75;filter: blur(0px) brightness(100%);">
                 <nav class="navbar navbar-light navbar-expand-md">
@@ -22,6 +22,57 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col">
+            <h3>Welcome, {{ request.user.username }} !</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3>Today's Plan</h3>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col text-left">
+            <div class="header">
+                <h3>Fitness</h3>
+            </div>
+            <ul>
+                <li>Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>
+                </ul>
+    
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-left">
+            <div class="header">
+                <h3>Mindset</h3>
+            </div>
+            <ul>
+                <li>Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>
+                </ul>
+    
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-left">
+            <div class="header">
+                <h3>Nurtition</h3>
+            </div>
+            <ul>
+                <li>Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>
+                </ul>
+    
+        </div>
+    </div>
+
 </div>
 <div></div>
 

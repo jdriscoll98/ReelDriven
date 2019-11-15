@@ -1,0 +1,54 @@
+{% extends 'website/base.html' %}
+
+{% block title %}{{ block.super }} | Home Page {% endblock title %}
+
+{% block contents %}
+
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="margin-top: 0; color: white;"><img src="static/website/images/logo.png"
+                    style="width: 100%;"></div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <table style="color: white;">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {% for field in form %}
+                        <tr>
+                            <td>
+                                {{ field.errors }}
+                                {{ field.label_tag }}
+                            </td>
+                            <td>
+                                {{ field}}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        <tr>
+                            <td>
+                                <button class="btn btn-primary" type="submit">Create Account</button>
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock contents %}
+
+{% block js %}
+<script>
+    $('#create-account').on('click', function () {
+        window.location.href = $(this).attr('href')
+    });
+
+</script>
+{% endblock %}
