@@ -4,10 +4,25 @@
 
 {% block contents %}
 
-<p class="lead">This is the home page.</p>
-
-<p class="lead">Click the button below to access the profile page.</p>
-
-<a class="btn btn-primary" href="{% url 'website:profile' %}" role="button">Profile</a>
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="margin-top: 0;background-color: #000000;opacity: 0.75;filter: blur(0px) brightness(100%);">
+                <nav class="navbar navbar-light navbar-expand-md">
+                    <div class="container-fluid"><img src="static/website/images/Realize%20Your%20Potential%20White%20.png" style="width: 50%;margin: auto;"><a class="navbar-brand" href="#" style="color: rgba(255,255,255,0.9);"></a>
+                        <div class="collapse navbar-collapse" id="navcol-1">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item" role="presentation"><a class="nav-link active" href="#">First Item</a></li>
+                                <li class="nav-item" role="presentation"><a class="nav-link" href="#">Second Item</a></li>
+                                <li class="nav-item" role="presentation"><a class="nav-link" href="#">Third Item</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<div></div>
 
 {% endblock contents %}

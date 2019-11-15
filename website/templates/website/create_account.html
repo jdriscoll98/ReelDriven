@@ -1,0 +1,34 @@
+{% extends 'website/base.html' %}
+
+{% block title %}{{ block.super }} | Home Page {% endblock title %}
+
+{% block contents %}
+
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="margin-top: 0;"><img src="static/website/images/logo.png" style="width: 100%;"></div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="container">
+        <div class="row">
+        <table>
+        {{ form.as_table }}
+        </table>
+        </div>
+    </div>
+</div>
+
+{% endblock contents %}
+
+{% block js %}
+<script>
+$('#create-account').on('click', function() {
+  window.location.href = $(this).attr('href')
+});
+
+</script>
+
+{% endblock js %}

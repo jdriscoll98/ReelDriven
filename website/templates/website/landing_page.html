@@ -1,0 +1,31 @@
+{% extends 'website/base.html' %}
+
+{% block title %}{{ block.super }} | Home Page {% endblock title %}
+
+{% block contents %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 0;"><img src="static/website/images/logo.png" style="width: 100%;"></div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                  <button class="btn btn-light border rounded-0 border-dark" href="{% url 'website:login' %}" id="log-in" type="button" style="width: 75%;background-color: #000000;color: rgb(255,255,255);"><strong>LOG IN</strong></button>
+                  <button class="btn btn-light border rounded-0 border-dark" href="{% url 'website:create_account' %}" id="create-account" type="button"
+                        style="width: 75%;background-color: #009add;margin-top: 21px;color: rgb(254,254,254);"><strong>CREATE</strong>&nbsp;<strong>ACCOUNT</strong></button></div>
+            </div>
+  </div>
+
+{% endblock contents %}
+
+{% block js %}
+<script>
+$('#log-in').on('click', function() {
+  window.location.href = $(this).attr('href')
+});
+$('#create-account').on('click', function() {
+  window.location.href = $(this).attr('href')
+});
+
+</script>
+
+{% endblock js %}

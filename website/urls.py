@@ -9,7 +9,8 @@ app_name = "website"
 
 urlpatterns = [
     # Home Page
-    url(r"^$", HomePageView.as_view(), name="home_page"),
-    # Profile Page
-    url(r"^profile$", ProfileView.as_view(), name="profile"),
+    url(r"^$", LandingPage.as_view(), name="landing_page"),
+    url(r"^login$", LoginPage.as_view(), name="login"),
+    url(r"^create$", CreateAccount.as_view(), name="create_account"),
+    url(r"^home$", HomePage.as_view(), name="home_page"),
 ]

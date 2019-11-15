@@ -1,0 +1,27 @@
+{% extends 'website/base.html' %}
+
+{% block title %}{{ block.super }} | Home Page {% endblock title %}
+
+{% block contents %}
+
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center" style="margin-top: 0;"><img src="static/website/images/logo.png" style="width: 75%;"></div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2"><input class="border rounded form-control-sm" type="text" required="" style="width: 100%;margin-top: 7.5px;margin-bottom: 7.5px;"><input class="border rounded form-control-sm" type="text" required="" style="width: 100%;margin-top: 15px;margin-bottom: 15px;">
+                <button
+                    class="btn btn-primary" type="button" style="width: 100%;margin-top: 7.5px;margin-bottom: 25px;background-color: rgb(0,154,221);">Log in&nbsp;</button><button class="btn btn-primary" type="button" style="width: 100%;margin-top: 7.5px;margin-bottom: 7.5px;background-color: rgb(59,89,152);font-size: 100%;"><strong>Login with Facebook</strong><i class="fab fa-facebook-square float-left" style="font-size: 150%;"></i></button>
+                    <button
+                        class="btn btn-primary shadow-lg" type="button" style="width: 100%;margin-top: 7.5px;margin-bottom: 7.5px;font-size: 100%;background-color: rgb(255,255,255);color: rgb(0,0,0);">Sign in with Google<img class="float-left" src="static/website/images/google-logo-png-open-2000.png" style="width: 10%;"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock contents %}
